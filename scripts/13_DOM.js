@@ -67,12 +67,6 @@ function createCard(item) {
   let petsLink = document.createElement('a');
   petsLink.appendChild(petsImg)
 
-  petsItem.addEventListener('click', () => {
-    document.createElement('div')
-
-  })
-
-
   // Додаємо класи
   petsItem.classList.add('pets__item');
   petsName.classList.add('pets__name');
