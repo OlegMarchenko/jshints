@@ -67,6 +67,11 @@ function createCard(item) {
   let petsLink = document.createElement('a');
   petsLink.appendChild(petsImg)
 
+  petsItem.addEventListener('click', () => {
+    document.createElement('div')
+
+  })
+
 
   // Додаємо класи
   petsItem.classList.add('pets__item');
@@ -199,8 +204,6 @@ function sortCat(revers) {
 
 btn1.addEventListener('click', () => sortCat(false))
 btn2.addEventListener('click', () => sortCat(true))
-
-
 
 
 // Пошук по слову або букві
