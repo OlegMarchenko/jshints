@@ -18,13 +18,16 @@
   border: 1px solid;
   border-radius: 10px;
 }
-.pets__img {
+.pets__link {
   display: block;
   width: 100%;
   height: 300px;
+}
+.pets__img {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  border-radius: 10px;
-  margin-bottom: 16px;
 }
 .pets__price {
   color: green;

@@ -17,13 +17,16 @@
     border: 1px solid;
     border-radius: 10px;
   }
-  &__img {
+  &__link {
     display: block;
     width: 100%;
     height: 300px;
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    border-radius: 10px;
-    margin-bottom: 16px;
   }
   &__price {
     color: green;

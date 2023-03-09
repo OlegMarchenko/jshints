@@ -65,6 +65,8 @@ function createCard(item) {
   let petsDescription = document.createElement('p');
   let petsLoc = document.createElement('h5');
   let petsLink = document.createElement('a');
+  petsLink.appendChild(petsImg)
+
 
   // Додаємо класи
   petsItem.classList.add('pets__item');
@@ -82,11 +84,13 @@ function createCard(item) {
   petsDescription.innerText = item.description;
   petsLoc.innerText = item.location;
   petsLink.setAttribute('href', item.url)
+  petsLink.setAttribute('target', '_blank')
+
 
 
 
   // Робимо верстку
-  petsItem.append(petsImg, petsName, petsPrice, petsDescription, petsLoc, petsLink)
+  petsItem.append(petsLink, petsName, petsPrice, petsDescription, petsLoc)
   return petsItem;
 
 
@@ -197,8 +201,6 @@ btn1.addEventListener('click', () => sortCat(false))
 btn2.addEventListener('click', () => sortCat(true))
 
 
-
-const btn = document.querySelector('.button');
 
 
 // Пошук по слову або букві
