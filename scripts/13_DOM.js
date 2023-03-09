@@ -67,6 +67,13 @@ function createCard(item) {
   let petsLink = document.createElement('a');
   petsLink.appendChild(petsImg)
 
+  petsLink.addEventListener('mouseenter', () => {
+    petsLink.style.backgroundColor = '#222';
+  })
+  petsLink.addEventListener('mouseleave', () => {
+    petsLink.style.backgroundColor = 'transparent';
+  })
+
   // Додаємо класи
   petsItem.classList.add('pets__item');
   petsName.classList.add('pets__name');
