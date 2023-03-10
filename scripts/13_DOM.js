@@ -185,8 +185,8 @@ function sortCat(revers) {
   out.innerHTML = ``;
 
   // Сортуємо
-  let sortPet = newPets.sort((item, index) => {
-    if (item.price > index.price) {
+  let sortPet = newPets.sort((a, b) => {
+    if (a.price > b.price) {
       return 1
     } else {
       return -1
