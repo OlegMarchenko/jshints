@@ -163,6 +163,8 @@ function searchName(arr, val) {
     }
   })
 
+
+
   return newArr
 }
 
@@ -205,19 +207,4 @@ function sortCat(revers) {
 
 btn1.addEventListener('click', () => sortCat(false))
 btn2.addEventListener('click', () => sortCat(true))
-
-
-// Пошук по слову або букві
-// let arr = ['ola', 'sasha', 'vika', 'kolya']
-
-// arr.map((item) => {
-//     if (item.indexOf('o') >= 0) console.log(item);
-// })
-
-
-// Прибираємо дублікати
-// let a = [1, 1, 2, 3, 4, 5, 5, 10, 9, 6, 6, 6]
-// let newA = new Set(a)
-// console.log(newA);
-
 
