@@ -43,7 +43,6 @@ const pets = [
   }
 ]
 
-
 const out = document.querySelector('.pets__container')
 const select = document.querySelector('select');
 const search = document.querySelector('.inp1');
@@ -52,6 +51,7 @@ const btn2 = document.querySelector('.btn2');
 
 
 let newPets = [...pets];
+
 
 
 
@@ -65,7 +65,7 @@ function createCard(item) {
   let petsDescription = document.createElement('p');
   let petsLoc = document.createElement('h5');
   let petsLink = document.createElement('a');
-  petsLink.appendChild(petsImg)
+  petsLink.appendChild(petsImg);
 
   petsLink.addEventListener('mouseenter', () => {
     petsLink.style.backgroundColor = '#222';
@@ -91,8 +91,6 @@ function createCard(item) {
   petsLoc.innerText = item.location;
   petsLink.setAttribute('href', item.url)
   petsLink.setAttribute('target', '_blank')
-
-
 
 
   // Робимо верстку
@@ -126,7 +124,7 @@ function createSelect(item) {
 }
 
 // Рендеримо селект спочатку
-createSelect(pets)
+createSelect(pets);
 
 
 // Це сортування по select
@@ -134,14 +132,14 @@ select.addEventListener('change', () => {
   newPets = []; // очищуюю
   out.innerHTML = ``;
   pets.forEach((item) => {
-    if (item.name == select.value) {
+    if (item.name === select.value) {
 
       // якщо я щось обира. сбди записуется новезначення
       newPets.push(item)
 
       let newPet = createCard(item)
       out.append(newPet)
-    } else if (select.value == 'всі') { // Показати всіх
+    } else if (select.value === 'всі') { // Показати всіх
       newPets.push(item)
       let newPet = createCard(item)
       out.append(newPet)
@@ -163,8 +161,6 @@ function searchName(arr, val) {
     }
   })
 
-
-
   return newArr
 }
 
@@ -172,6 +168,7 @@ function searchName(arr, val) {
 // Пошук по імені і співпадінню
 search.addEventListener('keyup', () => {
   out.innerHTML = ``;
+  console.log(search.value);
   let pet = searchName(pets, search.value);
   pet.forEach((item) => {
     let newPet = createCard(item)
@@ -205,6 +202,15 @@ function sortCat(revers) {
 }
 
 
-btn1.addEventListener('click', () => sortCat(false))
-btn2.addEventListener('click', () => sortCat(true))
 
+btn1.addEventListener('click', () => sortCat(false));
+btn2.addEventListener('click', () => sortCat(true));
+
+
+
+addEventListener('keydown', (e) => {
+  e.preventDefault();
+  if (e.key === 'e' && e.ctrlKey) {
+    console.log('ctrl + e')
+  }
+})
