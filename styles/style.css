@@ -5,11 +5,19 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .title {
   font-family: sans-serif;
   font-size: 40px;
   color: green;
   text-align: center;
+}
+
+body {
+  margin: 0;
 }
 
 .pets {
@@ -66,10 +74,9 @@ nav {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1170px;
   width: 100%;
   margin: 0 auto;
-  padding: 50px 0;
 }
 
 .cats-slider {
@@ -126,6 +133,31 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-one {
+  background-image: linear-gradient(-125deg, orangered, rebeccapurple);
+}
+.section-two {
+  background-image: linear-gradient(-125deg, gold, blueviolet);
+}
+.section-three {
+  background-image: linear-gradient(-125deg, yellowgreen, blue);
+}
+
+.uk-icon {
+  width: 100px;
+  height: 100px;
+}
+.uk-icon > svg {
+  width: inherit;
+  height: inherit;
 }
 
 /*# sourceMappingURL=style.css.map */
